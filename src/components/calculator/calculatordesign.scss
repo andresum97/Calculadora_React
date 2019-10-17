@@ -1,0 +1,13 @@
+.bodyCalculator{
+    background: rgb(14, 131, 182);
+    width: 30%;
+    height: 425px;
+    display: flex;
+    flex-direction: column;
+    min-width: 368px;
+}
+
+.calcButtons{
+    display: flex;
+    flex-direction: row;
+}
