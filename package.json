@@ -48,20 +48,21 @@
   },
   "jest": {
     "moduleFileExtensions": [
-        "js",
-        "jsx"
+      "js",
+      "jsx"
     ],
     "moduleDirectories": [
-        "node_modules",
-        "src"
+      "node_modules",
+      "src"
     ],
     "moduleNameMapper": {
-        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/_mocks_/fileMock.js",
-        "\\.(css|less)$": "<rootDir>/_mocks_/styleMock.js"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/_mocks_/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/_mocks_/styleMock.js"
     },
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js"
   },
   "dependencies": {
+    "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "cross-env": "^6.0.3",
     "jest": "^24.9.0",
