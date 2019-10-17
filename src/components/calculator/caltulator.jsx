@@ -50,7 +50,6 @@ class Calculator extends Component {
     } else if (valuecalc === 'C') {
       this.clear();
     }
-    // console.log(this.state.value);
   }
 
   // Metodo Clear para borrar el contenido del Display
@@ -125,27 +124,22 @@ class Calculator extends Component {
     const { value, operation, num1 } = this.state;
     if (operation !== 0) {
       const numt = Number(value);
+      let result = 0;
       this.clear();
       if (operation === 1) {
-        // console.log("num1",this.state.num1);
-        // console.log("num2",this.state.num2);
-        const result = num1 + numt;
-        // console.log("Llego a sumar y el resultado es",result);
-        this.setState({ value: `${result}` });
+        result = num1 + numt;
       }
       if (operation === 2) {
-        const result = num1 - numt;
-        this.setState({ value: `${result}` });
+        result = num1 - numt;
       }
       if (operation === 3) {
-        const result = num1 * numt;
-        this.setState({ value: `${result}` });
+        result = num1 * numt;
       }
       if (operation === 4) {
-        const result = num1 / numt;
-        this.setState({ value: `${result}` });
+        result = num1 / numt;
       }
-      this.setState({ operation: 0 });
+      result = this.valResult(result);
+      this.setState({ value: `${result}`, operation: 0 });
     }
   }
 
@@ -158,6 +152,24 @@ class Calculator extends Component {
       res = true;
     }
     return res;
+  }
+
+  valResult(num) {
+    let val;
+    let dec;
+    const proof = `${num}`;
+    if (proof.indexOf('.') !== -1) {
+      dec = num.toFixed(2);
+    } else {
+      dec = num;
+    }
+    const word = `${dec}`;
+    if (dec > 999999999 || word.length > 8 || dec < 0) {
+      val = 'ERROR';
+    } else {
+      val = dec;
+    }
+    return val;
   }
 
   render() {
