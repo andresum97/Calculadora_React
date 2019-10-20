@@ -46,6 +46,15 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2"
   },
+  "dependencies": {
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "cross-env": "^6.0.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
   "jest": {
     "moduleFileExtensions": [
       "js",
@@ -55,18 +64,12 @@
       "node_modules",
       "src"
     ],
+    "setupFilesAfterEnv": [
+      "<rootDir>src/setupTests.js"
+    ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/_mocks_/fileMock.js",
-      "\\.(css|less)$": "<rootDir>/_mocks_/styleMock.js"
-    },
-    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js"
-  },
-  "dependencies": {
-    "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.9.0",
-    "cross-env": "^6.0.3",
-    "jest": "^24.9.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+      "\\.(scss|css|less)$": "identity-obj-proxy"
+    }
   }
 }

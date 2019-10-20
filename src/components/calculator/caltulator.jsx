@@ -178,33 +178,33 @@ class Calculator extends Component {
       <div className="bodyCalculator">
         <Display value={value} />
         <div className="calcButtons">
-          <Buttons valor="C" color="1" click={this.dataButton} />
-          <Buttons valor="-/+" color="1" click={this.dataButton} />
-          <Buttons valor="%" color="1" click={this.dataButton} />
-          <Buttons valor="/" color="2" click={this.dataButton} />
+          <Buttons id="clear" valor="C" color="1" click={this.dataButton} />
+          <Buttons id="neg" valor="-/+" color="1" click={this.dataButton} />
+          <Buttons id="perc" valor="%" color="1" click={this.dataButton} />
+          <Buttons id="divide" valor="/" color="2" click={this.dataButton} />
         </div>
         <div className="calcButtons">
-          <Buttons valor="7" color="1" click={this.dataButton} />
-          <Buttons valor="8" color="1" click={this.dataButton} />
-          <Buttons valor="9" color="1" click={this.dataButton} />
-          <Buttons valor="x" color="2" click={this.dataButton} />
+          <Buttons id="num7" valor="7" color="1" click={this.dataButton} />
+          <Buttons id="num8" valor="8" color="1" click={this.dataButton} />
+          <Buttons id="num9" valor="9" color="1" click={this.dataButton} />
+          <Buttons id="mul" valor="x" color="2" click={this.dataButton} />
         </div>
         <div className="calcButtons">
-          <Buttons valor="4" color="1" click={this.dataButton} />
-          <Buttons valor="5" color="1" click={this.dataButton} />
-          <Buttons valor="6" color="1" click={this.dataButton} />
-          <Buttons valor="-" color="2" click={this.dataButton} />
+          <Buttons id="num4" valor="4" color="1" click={this.dataButton} />
+          <Buttons id="num5" valor="5" color="1" click={this.dataButton} />
+          <Buttons id="num6" valor="6" color="1" click={this.dataButton} />
+          <Buttons id="min" valor="-" color="2" click={this.dataButton} />
         </div>
         <div className="calcButtons">
-          <Buttons valor="1" color="1" click={this.dataButton} />
-          <Buttons valor="2" color="1" click={this.dataButton} />
-          <Buttons valor="3" color="1" click={this.dataButton} />
-          <Buttons valor="+" color="2" click={this.dataButton} />
+          <Buttons id="num1" valor="1" color="1" click={this.dataButton} />
+          <Buttons id="num2" valor="2" color="1" click={this.dataButton} />
+          <Buttons id="num3" valor="3" color="1" click={this.dataButton} />
+          <Buttons id="sum" valor="+" color="2" click={this.dataButton} />
         </div>
         <div className="calcButtons">
-          <Buttons valor="0" color="1" size="2" click={this.dataButton} />
-          <Buttons valor="." color="1" click={this.dataButton} />
-          <Buttons valor="=" color="2" click={this.dataButton} />
+          <Buttons id="num0" valor="0" color="1" size="2" click={this.dataButton} />
+          <Buttons id="point" valor="." color="1" click={this.dataButton} />
+          <Buttons id="equal" valor="=" color="2" click={this.dataButton} />
         </div>
       </div>
     );
